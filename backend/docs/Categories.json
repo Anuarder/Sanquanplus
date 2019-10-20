@@ -1,0 +1,160 @@
+{
+    "categories": [
+        {
+            "name": {
+                "en": "Plastic Extrusion Tape Stretching Line",
+                "ru": "Plastic Extrusion Tape Stretching Line"
+            },
+            "is_hidden": false
+        },
+        {
+            "name": {
+                "en": "Plastic Circular Loom",
+                "ru": "Круглоткацкий станок"
+            },
+            "is_hidden": false
+        },
+        {
+            "name": {
+                "en": "Plastic Coating Line",
+                "ru": "Plastic Coating Line"
+            },
+            "is_hidden": false
+        },
+        {
+            "name": {
+                "en": "Rotogravure Printing Machine",
+                "ru": "Машины для ротационной глубокой печати"
+            },
+            "is_hidden": false
+        },
+        {
+            "name": {
+                "en": "Laminating Machine",
+                "ru": "Ламинаторы"
+            },
+            "is_hidden": false
+        },
+        {
+            "name": {
+                "en": "Flexo Printing Machine For Woven Bag",
+                "ru": "Машины для непрерывной флексографической печати на тканых мешках"
+            },
+            "is_hidden": false
+        },
+        {
+            "name": {
+                "en": "Printing Machine For Container Bag",
+                "ru": "Печатные машины для печати на мягких контейнерах"
+            },
+            "is_hidden": false
+        },
+        {
+            "name": {
+                "en": "Printing Machine For Jumbo Ba",
+                "ru": "Printing Machine For Jumbo Ba"
+            },
+            "is_hidden": false
+        },
+        {
+            "name": {
+                "en": "Auto Cutting And Sewing Machine for Woven Bag",
+                "ru": "Printing Machine For Jumbo Ba"
+            },
+            "is_hidden": false
+        },
+        {
+            "name": {
+                "en": "Auto Cutting And Sewing Machine for Woven Bag",
+                "ru": "Автоматические резальные и швейные машины для тканых мешков"
+            },
+            "is_hidden": false
+        },
+        {
+            "name": {
+                "en": "KS Series Hydraulic Baling Machine",
+                "ru": "Гидравлические упаковочные прессы серии KS"
+            },
+            "is_hidden": false
+        },
+        {
+            "name": {
+                "en": "PE Film Cutting & Inserting & Sewing Machine",
+                "ru": "PE Film Cutting & Inserting & Sewing Machine"
+            },
+            "is_hidden": false
+        },
+        {
+            "name": {
+                "en": "Twist & Gusset",
+                "ru": "Twist & Gusset"
+            },
+            "is_hidden": false
+        },
+        {
+            "name": {
+                "en": "Auxiliary Machine",
+                "ru": "Auxiliary Machine"
+            },
+            "is_hidden": false
+        },
+        {
+            "name": {
+                "en": "Plastic Woven Jumbo Bag And Related Auxiliary And After Finishing Equipments",
+                "ru": "Оборудование для производства тканых полипропиленовых биг-бегов, а также дополнительное и финишное оборудование"
+            },
+            "is_hidden": false,
+            "subcategories": [
+                {
+                    "name": {
+                        "en": "JUMBO BAG RIBBON LOOM",
+                        "ru": "Ткацкий Станок Для Изготовления Лент Для Биг-Бэгов"
+                    },
+                    "is_hidden": false
+                },
+                {
+                    "name": {
+                        "en": "Automatic Jumbo Bag Cutting Machine",
+                        "ru": "Машина Для Автоматической Резки Биг-Бэгов"
+                    },
+                    "is_hidden": false
+                },
+                {
+                    "name": {
+                        "en": "Plastic Monofilament Extrusion Line",
+                        "ru": "Экструзионная линия для производства мононити"
+                    },
+                    "is_hidden": false
+                },
+                {
+                    "name": {
+                        "en": "High-Speed Ribbon Cutting Machine",
+                        "ru": "Машина Для Высокоскоростной Резки Лент"
+                    },
+                    "is_hidden": false
+                },
+                {
+                    "name": {
+                        "en": "Other Equipment",
+                        "ru": "Other Equipment"
+                    },
+                    "is_hidden": false
+                }
+            ]
+        },
+        {
+            "name": {
+                "en": "Sewing Machine",
+                "ru": "Швейные машины"
+            },
+            "is_hidden": false
+        },
+        {
+            "name": {
+                "en": "Chiller",
+                "ru": "Винтовой воздушный охладитель"
+            },
+            "is_hidden": false
+        }
+    ]
+}
