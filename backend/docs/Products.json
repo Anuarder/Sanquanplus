@@ -1,0 +1,23 @@
+{
+    "products": [
+        {
+            "name": {
+                "en": "",
+                "ru": ""
+            },
+            "images": [
+                "files/products/image.jpg"
+            ],
+            "description": {
+                "en": "",
+                "ru": ""
+            },
+            "characteristics": {
+                "en": "",
+                "ru": ""
+            },
+            "category": "id",
+            "subcategory": null
+        }
+    ]
+}
