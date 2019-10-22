@@ -12,10 +12,29 @@
                 "en": "",
                 "ru": ""
             },
-            "characteristics": {
-                "en": "",
-                "ru": ""
-            },
+            "characteristics": [
+                {
+                    "name": {
+                        "en": "",
+                        "ru": ""
+                    },
+                    "headers": [
+                        {
+                            "name": "",
+                            "value": ""
+                        }
+                    ],
+                    "data": [
+                        {
+                            "name": {
+                                "en": "",
+                                "ru": ""
+                            },
+                            "value": ""
+                        }
+                    ]
+                }
+            ],
             "category": "id",
             "subcategory": null
         }
