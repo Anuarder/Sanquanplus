@@ -2,6 +2,9 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import VPagination from "./components/Pagination.vue"
+
+Vue.component('v-pagination', VPagination)
 
 Vue.config.productionTip = false
 

@@ -1,20 +1,40 @@
 <template>
-  <div class="home">
-    <ul class="list-group mt-4">
-      <li class="list-group-item">Cras justo odio</li>
-      <li class="list-group-item">Dapibus ac facilisis in</li>
-      <li class="list-group-item">Morbi leo risus</li>
-      <li class="list-group-item">Porta ac consectetur ac</li>
-      <li class="list-group-item">Vestibulum at eros</li>
-    </ul>
-    <v-pagination></v-pagination>
+  <div class="products">
+    <button class="btn btn-success btn-lg">Добавить</button>
+    <div class="products__container mt-3">
+      <div class="product">
+        <div class="card" style="width: 18rem;">
+          <img 
+            src="../assets/image.png" 
+            class="card-img-top" 
+            alt="...">
+          <div class="card-body">
+            <h5 class="card-title">HDPE Tarpaulin Extrusion Tape Line</h5>
+            <a href="#" class="btn btn-primary">Редактировать</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <v-pagination></v-pagination> -->
   </div>
 </template>
 <script>
-import VPagination from "../components/Pagination"
+import { mapGetters, mapActions } from 'vuex'
 export default {
-  components: {
-    VPagination
+  computed: {
+    ...mapGetters(['products'])
+  },
+  methods: {
+    ...mapActions(['getProducts'])
   }
 }
 </script>
+<style lang="scss" scoped>
+.products{
+  &__container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 20px;
+  }
+}
+</style>

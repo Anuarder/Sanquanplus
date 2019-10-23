@@ -1,15 +1,18 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Products from '../views/Products.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'products',
-    component: Products
+    redirect: 'products'
   },
+  {
+    path: '/products/:id',
+    name: 'products',
+    component: () => import('../views/Products.vue'),
+  }
 ]
 const router = new VueRouter({
   mode: 'history',
