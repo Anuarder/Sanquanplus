@@ -1,6 +1,6 @@
 <template>
   <div class="products">
-    <button class="btn btn-success btn-lg">Добавить</button>
+    <router-link class="btn btn-success btn-lg" to="/create-product">Добавить</router-link>
     <div class="products__container mt-3">
       <div class="product">
         <div class="card" style="width: 18rem;">
@@ -10,7 +10,10 @@
             alt="...">
           <div class="card-body">
             <h5 class="card-title">HDPE Tarpaulin Extrusion Tape Line</h5>
-            <a href="#" class="btn btn-primary">Редактировать</a>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-info">Редактировать</button>
+              <button type="button" class="btn btn-danger">Удалить</button>
+            </div>
           </div>
         </div>
       </div>
