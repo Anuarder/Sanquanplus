@@ -35,5 +35,31 @@ module.exports = {
         error: err
       })
     }
+  },
+  async getProductsByCategory(req, res) {
+    try{
+      const products = await Product.find({category: req.params.id});
+      res.status(200).send({
+        products: products
+      });
+    }catch(err){
+      console.log(err);
+      res.status(400).send({
+        error: err
+      })
+    }
+  },
+  async getProductById(req, res) {
+    try{
+      const product = await Product.findOne({_id: req.params.id});
+      res.status(200).send({
+        product: product
+      });
+    }catch(err){
+      console.log(err);
+      res.status(400).send({
+        error: err
+      })
+    }
   }
 }

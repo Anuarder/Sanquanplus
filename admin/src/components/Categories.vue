@@ -4,15 +4,17 @@
       <router-link
         class="list-group-item list-group-item-action list-group-item-success"
         active-class="active"
-        to="/create-category"
-      >Создать категорию</router-link>
+        to="/category/create">
+        Создать категорию
+      </router-link>
       <router-link
         v-for="item in categories"
         :key="item._id"
         :to="`/products/${item._id}`"
         active-class="active"
-        class="list-group-item list-group-item-action"
-      >{{item.name.ru}}</router-link>
+        class="list-group-item list-group-item-action">
+        {{item.name.en}}
+      </router-link>
     </ul>
   </div>
 </template>

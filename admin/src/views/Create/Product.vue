@@ -21,18 +21,33 @@
         <input 
           type="text" 
           class="form-control  form-control-lg" 
-          placeholder="Введите название" />
+          placeholder="Введите название на английском" />
+        <input 
+          type="text" 
+          class="form-control  form-control-lg mt-2" 
+          placeholder="Введите название на русском" />
       </div>
       <div class="form-group">
         <label>Описание</label>
         <textarea 
           type="text" 
           class="form-control  form-control-lg" 
-          placeholder="Введите описание" />
+          placeholder="Введите описание на английском" />
+        <textarea 
+          type="text" 
+          class="form-control  form-control-lg mt-2" 
+          placeholder="Введите описание на русском" />
+      </div>
+      <div class="form-group">
+        <label>Фотографии</label>
+        <input type="file" multiple class="form-control-file">
       </div>
       <div class="form-group">
         <label>Категория</label>
         <select class="form-control" v-model="category">
+          <option value="">
+            Выберите категорию
+          </option>
           <option  
             v-for="item in categories"
             :key="item._id"
@@ -91,15 +106,20 @@
 import { mapGetters, mapActions } from 'vuex'
 import { isEmpty } from 'lodash'
 export default {
+  props: ['action'],
   data(){
     return{
-      title: "Добавить",
-      isEdit: false,
-      category: []
+      category: ""
     }
   },
   computed: {
-    ...mapGetters(['categories'])
+    ...mapGetters(['categories']),
+    title() {
+      return this.action === 'create' ? 'Добавить' : 'Редактировать';
+    },
+    isEdit() {
+      return this.action === 'edit'
+    }
   },
   methods: {
     ...mapActions([]),

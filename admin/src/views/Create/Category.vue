@@ -21,7 +21,11 @@
         <input 
           type="text" 
           class="form-control  form-control-lg" 
-          placeholder="Введите название" />
+          placeholder="Введите название на английском" />
+        <input 
+          type="text" 
+          class="form-control  form-control-lg mt-2" 
+          placeholder="Введите название на русском" />
       </div>
       <div class="checkbox-container">
         <input type="checkbox" class="checkbox">

@@ -1,24 +1,26 @@
 <template>
   <div class="products">
-    <router-link class="btn btn-success btn-lg" to="/create-product">Добавить</router-link>
+    <router-link 
+      class="btn btn-success btn-lg" 
+      to="/product/create">
+      Добавить
+    </router-link>
     <div class="products__container mt-3">
-      <div class="product">
-        <div class="card" style="width: 18rem;">
-          <img 
-            src="../assets/image.png" 
-            class="card-img-top" 
-            alt="...">
-          <div class="card-body">
-            <h5 class="card-title">HDPE Tarpaulin Extrusion Tape Line</h5>
-            <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-info">Редактировать</button>
-              <button type="button" class="btn btn-danger">Удалить</button>
+      <div class="product" v-for="item in products" :key="item._id">
+        <router-link :to="`/product-view/${item._id}`" class="card-link text-dark">
+          <div class="card" style="width: 18rem;">
+            <img 
+              :src="`http://localhost:3000/static/${item.images[0]}`" 
+              class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">
+                {{item.name.en}}
+              </h5>
             </div>
           </div>
-        </div>
+        </router-link>
       </div>
     </div>
-    <!-- <v-pagination></v-pagination> -->
   </div>
 </template>
 <script>
@@ -26,6 +28,9 @@ import { mapGetters, mapActions } from 'vuex'
 export default {
   computed: {
     ...mapGetters(['products'])
+  },
+  created() {
+    this.getProducts(this.$route.params.id)
   },
   methods: {
     ...mapActions(['getProducts'])

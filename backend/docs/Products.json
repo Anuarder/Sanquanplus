@@ -2,15 +2,15 @@
     "products": [
         {
             "name": {
-                "en": "",
-                "ru": ""
+                "en": "PSCS-35 Cutting &Sewing Machine for Woven Bags",
+                "ru": "PSCS-35 Cutting &Sewing Machine for Woven Bags"
             },
             "images": [
-                "files/products/image.jpg"
+                "products/PSCS-35 Cutting &Sewing Machine for Woven Bags.png"
             ],
             "description": {
-                "en": "",
-                "ru": ""
+                "en": "<ul> <li> Magnet Gripper for long life use (Innovative Gripper instead of traditional spring gripper) </li> <li> Two working position for circulation transferring by magnet gripper </li> <li> Servo controlling for cutting accuracy </li> <li> High-speed cutting and sewing </li> <li> Heat cutting with bag mouth open system equipped </li> <li> Edge position control(EPC) for winding and unwinding </li> <li> PLC operation control, digital display for operation monitor and operation setting </li> </ul>",
+                "ru": "<ul> <li> Magnet Gripper for long life use (Innovative Gripper instead of traditional spring gripper) </li> <li> Two working position for circulation transferring by magnet gripper </li> <li> Servo controlling for cutting accuracy </li> <li> High-speed cutting and sewing </li> <li> Heat cutting with bag mouth open system equipped </li> <li> Edge position control(EPC) for winding and unwinding </li> <li> PLC operation control, digital display for operation monitor and operation setting </li> </ul>"
             },
             "characteristics": [
                 {
@@ -20,22 +20,79 @@
                     },
                     "headers": [
                         {
-                            "name": "",
-                            "value": ""
+                            "name": "Parameter",
+                            "value": "parameter"
+                        },
+                        {
+                            "name": "PSCS-35",
+                            "value": "pscs-35"
                         }
                     ],
                     "data": [
                         {
-                            "name": {
-                                "en": "",
-                                "ru": ""
+                            "parameter": {
+                                "en": "Max. Facbric Width",
+                                "ru": "Max. Facbric Width"
                             },
-                            "value": ""
+                            "pscs-35": {
+                                "en": "800mm",
+                                "ru": "800mm"
+                            }
+                        },
+                        {
+                            "parameter": {
+                                "en": "Cutting Length",
+                                "ru": "Cutting Length"
+                            },
+                            "pscs-35": {
+                                "en": "350-1250mm",
+                                "ru": "350-1250mm"
+                            }
+                        },
+                        {
+                            "parameter": {
+                                "en": "Cutting accutacy",
+                                "ru": "Cutting accutacy"
+                            },
+                            "pscs-35": {
+                                "en": "+1.5mm",
+                                "ru": "+1.5mm"
+                            }
+                        },
+                        {
+                            "parameter": {
+                                "en": "Sewing Speed",
+                                "ru": "Sewing Speed"
+                            },
+                            "pscs-35": {
+                                "en": "35pcs/min",
+                                "ru": "35pcs/min"
+                            }
+                        },
+                        {
+                            "parameter": {
+                                "en": "Stitch range",
+                                "ru": "Stitch range"
+                            },
+                            "pscs-35": {
+                                "en": "3.6-8mm",
+                                "ru": "3.6-8mm"
+                            }
+                        },
+                        {
+                            "parameter": {
+                                "en": "Folding width",
+                                "ru": "Folding width"
+                            },
+                            "pscs-35": {
+                                "en": "15-25mm",
+                                "ru": "15-25mm"
+                            }
                         }
                     ]
                 }
             ],
-            "category": "id",
+            "category": "5dac803d1a69c80ec88f2cae",
             "subcategory": null
         }
     ]

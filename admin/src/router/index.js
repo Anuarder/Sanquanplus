@@ -14,14 +14,21 @@ const routes = [
     component: () => import('../views/Products.vue'),
   },
   {
-    path: '/create-category',
+    path: '/category/:action',
     name: 'create-category',
     component: () => import('../views/Create/Category.vue'),
   },
   {
-    path: '/create-product',
-    name: 'create-product',
+    path: '/product/:action',
+    name: 'product',
     component: () => import('../views/Create/Product.vue'),
+    props: true
+  },
+  {
+    path: '/product-view/:id',
+    name: 'product-view',
+    component: () => import('../views/Product.vue'),
+    props: true
   },
 ]
 const router = new VueRouter({

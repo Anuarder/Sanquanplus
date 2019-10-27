@@ -23,11 +23,24 @@ module.exports = {
       })
     }
   },
-  async createCategory(req, res) {
+  async createCategories(req, res) {
     try {
       const categories = await Category.insertMany(req.body.categories);
       res.status(200).send({
         message: "Категории добавлены"
+      })
+    } catch (err) {
+      console.log(err);
+      res.status(400).send({
+        error: err
+      })
+    }
+  },
+  async createCategory(req, res) {
+    try {
+      const category = await Category.insertOne(req.body.categories);
+      res.status(200).send({
+        message: "Категория добавлена"
       })
     } catch (err) {
       console.log(err);
