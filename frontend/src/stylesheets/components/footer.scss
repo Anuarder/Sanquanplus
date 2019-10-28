@@ -1,0 +1,59 @@
+.footer {
+  margin-left: 90px;
+  background-color: #373334;
+  color: white;
+  height: 400px;
+  @include flex_center;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    margin: 0 auto;
+    max-width: 1500px;
+    width: 1500px;
+  }
+
+  &__links {
+    @include flex_column;
+    line-height: 220%;
+    width: 260px;
+  }
+
+  &__link {
+    opacity: .7;
+    &--active {
+      font-weight: 600;
+      opacity: 1;
+      font-size: 1.25rem;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+  
+  &__contact {
+    opacity: .8;
+  }
+
+  &__language-switch {
+    font-weight: 600;
+  }
+
+  &__request {
+    @include flex_column;
+    line-height: 150%;
+    font-size: 1.25rem;
+    width: 260px;
+
+    button {
+      margin-top: 1rem;
+    }
+  }
+}

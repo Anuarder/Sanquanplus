@@ -1,0 +1,12 @@
+.color {
+  &-red {
+    color: #D42810;
+  }
+}
+
+.btn {
+  @include input-reset;
+  max-width: 290px;
+  height: 60px;
+  background: #D74339;
+}

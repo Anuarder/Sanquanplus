@@ -1,3 +1,9 @@
+@import "./mixins.scss";
+@import "./helpers.scss";
+@import "./root.scss";
+@import "./layout.scss";
+
+
 @import "./components/card.scss";
 @import "./components/categories.scss";
 @import "./components/characteristics.scss";
@@ -5,3 +11,7 @@
 @import "./components/navigation.scss";
 @import "./components/sidebar.scss";
 @import "./components/slider.scss";
+@import "./components/search.scss";
+@import "./components/footer.scss";
+
+@import "./views/home.scss";
