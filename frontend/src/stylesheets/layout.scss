@@ -1,18 +1,16 @@
-.app {
-  max-width: 1920px;
+.page {
+  display: flex;
   min-height: 100vh;
-  @include flex_column;
-  
-  &-navigation {
-    margin: 0 auto;
-    max-width: 1500px;
-    width: 1500px;
-  }
+}
 
-  &-content {
-    flex: 1;
-    margin: 0 auto;
-    max-width: 1500px;
-    width: 1500px;
-  }
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 1500px;
+  margin: 0 auto;
+}
+
+.content {
+  flex: 1;
+  height: 100%;
 }
