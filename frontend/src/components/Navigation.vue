@@ -2,7 +2,7 @@
   <div class="navigation">
     <div class="navigation__container">
       <div class="navigation__actions">
-        <div class="navigation__logo">
+        <div class="navigation__logo" v-if="!isCatalog">
           <img src="@/assets/logo.png" alt="logo">
         </div>
         <div class="navigation__links">
@@ -12,7 +12,7 @@
           <router-link class="navigation__link" active-class="navigation__link--active" to="/about">
             О нас
           </router-link>
-          <router-link class="navigation__link" active-class="navigation__link--active" to="/info">
+          <router-link class="navigation__link" active-class="navigation__link--active" to="/information">
             Информация
           </router-link>
           <router-link class="navigation__link" active-class="navigation__link--active" to="/contacts">
@@ -33,3 +33,10 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  props: {
+    isCatalog: Boolean
+  }
+}
+</script>

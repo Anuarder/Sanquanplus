@@ -8,7 +8,7 @@
           <router-link to="/about" active-class="footer__link--active" class="footer__link">
             О нас
           </router-link>
-          <router-link to="/info" active-class="footer__link--active" class="footer__link">
+          <router-link to="/information" active-class="footer__link--active" class="footer__link">
             Информация
           </router-link>
           <router-link to="/contacts" active-class="footer__link--active" class="footer__link">

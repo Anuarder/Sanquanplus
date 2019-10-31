@@ -1,7 +1,7 @@
 <template>
   <div class="about page">
     <v-sidebar></v-sidebar>
-    <div class="container">
+    <div class="container about__container">
       <v-navigation></v-navigation>
       <div class="about__content content">
         <div class="about__numbers">
@@ -91,9 +91,9 @@
               </div>
             </div>
           </div>
-          <div class="about__list-button">
+          <router-link class="about__list-button" to="/catalog">
             Открыть каталог
-          </div>
+          </router-link>
         </div>
       </div>
     </div>
