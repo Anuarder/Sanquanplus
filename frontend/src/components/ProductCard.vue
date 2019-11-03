@@ -1,6 +1,8 @@
 <template>
   <div class="product-card">
-    <div class="product-card__image" :style="`background-image: url('http://192.168.1.38:3000/static/${product.images[0]}')`">
+    <div 
+      class="product-card__image" 
+      :style="`background-image: url('${api_link}/static/${product.images[0]}')`">
     </div>
     <h1>
       {{product.name.en}}
@@ -8,9 +10,13 @@
   </div>
 </template>
 <script>
+import { mapState } from 'vuex'
 export default {
   props: {
     product: Object
+  },
+  computed: {
+    ...mapState(['api_link'])
   }
 }
 </script>

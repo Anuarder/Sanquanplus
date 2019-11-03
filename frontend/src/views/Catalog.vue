@@ -58,7 +58,7 @@ export default {
           en: "PSCS-35 Cutting &Sewing Machine for Woven Bags"
         }
       }
-    };
+    }
   },
   created() {
     this.getCategories();

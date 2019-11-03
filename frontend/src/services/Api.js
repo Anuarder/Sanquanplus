@@ -1,7 +1,8 @@
 import axios from 'axios'
+import store from '../store'
 
 export default () => {
   return axios.create({
-    baseURL: 'http://192.168.1.38:3000/api',
+    baseURL: `${store.state.api_link}/api`,
   });
 }
