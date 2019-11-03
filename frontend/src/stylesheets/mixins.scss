@@ -42,17 +42,6 @@
   align-items: center;
 }
 
-@mixin flex_vertical_start() {
-  display: flex;
-  align-items: flex-start;
-}
-
-@mixin flex_horizontal_start() {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
 @mixin input_reset() {
   outline: none;
   background: none;

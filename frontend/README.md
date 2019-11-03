@@ -1,4 +1,4 @@
-# frontend
+# sanquan
 
 ## Project setup
 ```

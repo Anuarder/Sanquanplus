@@ -15,9 +15,11 @@ app.use(bodyParser.json());
 
 const category_router = require('./routers/category');
 const product_router = require('./routers/product');
+const request_router = require('./routers/request');
 
 app.use('/api', category_router);
 app.use('/api', product_router);
+app.use('/api', request_router);
 app.use('/static', express.static(__dirname + '/files'));
 
 app.use((req, res, next) => res.status(404).send({ url: req.url, error: `route_not_found` }));

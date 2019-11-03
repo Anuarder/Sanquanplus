@@ -2,15 +2,16 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import "./stylesheets/main.scss"
 
-import VNavigation from "./components/Navigation.vue"
-import VSidebar from "./components/Sidebar.vue"
-import VFooter from "./components/Footer.vue"
+import VSidebar from './components/Sidebar.vue'
+import VNavigation from './components/Navigation.vue'
+import VFooter from './components/Footer.vue'
+import VProductCard from './components/ProductCard.vue'
 
-Vue.component('v-navigation', VNavigation);
 Vue.component('v-sidebar', VSidebar);
+Vue.component('v-navigation', VNavigation);
 Vue.component('v-footer', VFooter);
+Vue.component('v-product-card', VProductCard);
 
 Vue.config.productionTip = false
 

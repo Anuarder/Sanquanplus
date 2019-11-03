@@ -5,29 +5,29 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: "/",
-    name: "home",
+    path: '/',
+    name: 'home',
     component: () => import('../views/Home.vue')
   },
   {
-    path: "/catalog",
-    name: "catalog",
-    component: () => import("../views/Catalog.vue")
+    path: '/about',
+    name: 'about',
+    component: () => import('../views/About.vue')
   },
   {
-    path: "/about",
-    name: "about",
-    component: () => import("../views/About.vue")
+    path: '/info',
+    name: 'info',
+    component: () => import('../views/Info.vue')
   },
   {
-    path: "/information",
-    name: "information",
-    component: () => import("../views/Information.vue")
+    path: '/contacts',
+    name: 'contacts',
+    component: () => import('../views/Contacts.vue')
   },
   {
-    path: "/contacts",
-    name: "contacts",
-    component: () => import("../views/Contacts.vue")
+    path: '/catalog',
+    name: 'catalog',
+    component: () => import('../views/Catalog.vue')
   },
 ]
 
