@@ -1,5 +1,5 @@
 <template>
-  <div class="product-card">
+  <router-link class="product-card" tag="div" to='/product'>
     <div 
       class="product-card__image" 
       :style="`background-image: url('${api_link}/static/${product.images[0]}')`">
@@ -7,7 +7,7 @@
     <h1>
       {{product.name.en}}
     </h1>
-  </div>
+  </router-link>
 </template>
 <script>
 import { mapState } from 'vuex'
