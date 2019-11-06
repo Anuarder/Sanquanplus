@@ -38,8 +38,13 @@
               </tbody>
             </table>
           </div>
-          <button class="product__button">Оформить заказ</button>
+          <button class="product__button" @click="dialog = true">Оформить заказ</button>
         </div>
+        <v-dialog
+          v-if="dialog"
+          :product="product"
+          @close="dialog = false">
+        </v-dialog>
       </div>
       <v-footer></v-footer>
     </div>
@@ -47,9 +52,14 @@
 </template>
 <script>
 import { mapState } from 'vuex'
+import VDialog from '../components/Dialog'
 export default {
+  components: {
+    VDialog
+  },
   data() {
     return {
+      dialog: false,
       product: {
         name: {
           en: "PSCS-35 Cutting &Sewing Machine for Woven Bags",

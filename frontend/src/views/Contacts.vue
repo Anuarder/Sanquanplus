@@ -13,15 +13,15 @@
               <h1>Свяжитесь с нами</h1>
               <form>
                 <div class="input-container">
-                  <input type="text" placeholder="Имя" required>
-                  <input type="text" placeholder="Фамилия" required>
+                  <input type="text" placeholder="Имя" required v-model="first_name">
+                  <input type="text" placeholder="Фамилия" required v-model="last_name">
                 </div>
                 <div class="input-container">
-                  <input type="email" placeholder="E-mail" required>
-                  <input type="text" placeholder="Телефон" required>
+                  <input type="email" placeholder="E-mail" required v-model="email">
+                  <input type="text" placeholder="Телефон" required v-model="phone">
                 </div>
                 <div class="input-container">
-                  <textarea placeholder="Ваше сообщение" required />
+                  <textarea placeholder="Ваше сообщение" required  v-model="message"/>
                 </div>
                 <button type="submit">
                   Отправить сообщение
@@ -49,6 +49,30 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      first_name: '',
+      last_name: '',
+      email: '',
+      phone: '',
+      message: ''
+    }
+  },
+  methods: {
+    sendRequest() {
+      this.$store.dispatch('sendRequest', {
+        subject: 'Заявка с сайта sanquanplus',
+        fullname: `${this.first_name} ${this.last_name}`,
+        email: this.email,
+        phone: this.phone,
+        message: this.message
+      })
+    }
+  }
+}
+</script>
 <style lang="scss" scoped>
 @import "@/stylesheets/mixins.scss";
 
