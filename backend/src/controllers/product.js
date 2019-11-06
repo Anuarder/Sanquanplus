@@ -4,13 +4,19 @@ const {
 const Product = require('../models/Product');
 
 module.exports = {
-  async getProducts(req, res) {
+  async getSearchProducts(req, res) {
     try {
       const products = await Product.find({});
+      const { search } = req.body;
       if (!isEmpty(products)) {
-        res.status(200).send({
-          products: products
-        });
+        // TODO: Поиск товаров здесь замутим
+        const result = ['sha vse budet'];
+        for(let item of products) {
+          console.log(item.name.en === search)
+        }
+        res.send({
+          products: result
+        })
       } else {
         res.status(404).send({
           error: "Товары отсутсвуют"

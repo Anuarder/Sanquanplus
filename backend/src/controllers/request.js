@@ -3,6 +3,7 @@ const nodemailer = require('nodemailer');
 module.exports = {
   async sendRequest(req, res) {
     try {
+      const { subject, fullname, email, phone, message, product_name } = req.body;
       let transporter = nodemailer.createTransport({
         pool: true,
         host: "smtp.yandex.ru",
@@ -16,15 +17,36 @@ module.exports = {
           rejectUnauthorized: false
         }
       });
-      let message = {
+
+      const text = `
+        Имя: ${fullname}\n
+        Email: ${email}\n
+        Телефон: ${phone}\n
+        Сообщение: ${message}\n
+      `
+      const textWithProduct = `
+        Имя: ${fullname}\n
+        Email: ${email}\n
+        Телефон: ${phone}\n
+        Сообщение: ${message}\n
+        Продукт: ${product_name}
+      `
+
+      const payload = {
         from: "",
         to: "",
-        subject: req.body.subject,
-        text: req.body.message,
-        html: `<p>${req.body.message.toString()}</p>`
+        subject: subject
       };
 
-      await transporter.sendMail(message);
+      if(product_name) {
+        payload.text = textWithProduct;
+        payload.html = textWithProduct
+      }else {
+        payload.text = text;
+        payload.html = text
+      }
+
+      await transporter.sendMail(payload);
 
       res.send({
         message: "Message has been sent"
