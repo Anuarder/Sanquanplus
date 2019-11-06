@@ -103,44 +103,7 @@
                 "en": "Plastic Woven Jumbo Bag And Related Auxiliary And After Finishing Equipments",
                 "ru": "Оборудование для производства тканых полипропиленовых биг-бегов, а также дополнительное и финишное оборудование"
             },
-            "is_hidden": false,
-            "subcategories": [
-                {
-                    "name": {
-                        "en": "JUMBO BAG RIBBON LOOM",
-                        "ru": "Ткацкий Станок Для Изготовления Лент Для Биг-Бэгов"
-                    },
-                    "is_hidden": false
-                },
-                {
-                    "name": {
-                        "en": "Automatic Jumbo Bag Cutting Machine",
-                        "ru": "Машина Для Автоматической Резки Биг-Бэгов"
-                    },
-                    "is_hidden": false
-                },
-                {
-                    "name": {
-                        "en": "Plastic Monofilament Extrusion Line",
-                        "ru": "Экструзионная линия для производства мононити"
-                    },
-                    "is_hidden": false
-                },
-                {
-                    "name": {
-                        "en": "High-Speed Ribbon Cutting Machine",
-                        "ru": "Машина Для Высокоскоростной Резки Лент"
-                    },
-                    "is_hidden": false
-                },
-                {
-                    "name": {
-                        "en": "Other Equipment",
-                        "ru": "Other Equipment"
-                    },
-                    "is_hidden": false
-                }
-            ]
+            "is_hidden": false
         },
         {
             "name": {

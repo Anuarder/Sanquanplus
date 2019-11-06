@@ -29,7 +29,7 @@ module.exports = {
       })
     }
   },
-  async createProduct(req, res) {
+  async createProducts(req, res) {
     try {
       const product = await Product.insertMany(req.body.products);
       res.status(200).send({

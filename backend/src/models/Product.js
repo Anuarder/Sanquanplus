@@ -8,7 +8,10 @@ const characteristicsSchema = new Schema({
     },
     headers: [
         {
-            name: String,
+            name: {
+                ru: String,
+                en: String
+            },
             value: String
         }
     ],
@@ -28,7 +31,6 @@ const productSchema = new Schema(
         },
         characteristics: [characteristicsSchema],
         category: String,
-        subcategory: String
     },
     {
         collection: "products"
