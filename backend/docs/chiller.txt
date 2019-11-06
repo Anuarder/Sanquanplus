@@ -1,0 +1,278 @@
+{
+    "products": [
+        {
+            "name": {
+                "en": "GC-120-ASCS",
+                "ru": "GC-120-ASCS"
+            },
+            "images": [
+                "products/Chiller_GC-120.jpg"
+            ],
+            "description": {
+                "en": "",
+                "ru": ""
+            },
+            "characteristics": [
+                {
+                    "name": {
+                        "en": "",
+                        "ru": ""
+                    },
+                    "headers": [
+                        {
+                            "name": {
+                                "en": "Model",
+                                "ru": "Модель"
+                            },
+                            "value": "model"
+                        },
+                        {
+                            "name": {
+                                "en": "GC-120-ASCS(Air cooled screw chiller)",
+                                "ru": "GC-120-ASCS (винтовой охладитель с воздушным охлаждением)"
+                            },
+                            "value": "gc-120-ascs"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "model": {
+                                "en": "Temperature of Chilling water in/out",
+                                "ru": "Температура входа/выхода охлаждающей воды"
+                            },
+                            "gc-120-ascs": {
+                                "unit": "℃",
+                                "en": "12℃/7℃",
+                                "ru": "12℃/7℃"
+                            }
+                        },
+                        {
+                            "model": {
+                                "en": "Temperature of condensate air",
+                                "ru": "Температура конденсации воздуха"
+                            },
+                            "gc-120-ascs": {
+                                "unit": "℃",
+                                "en": "35 °C",
+                                "ru": "35 °C"
+                            }
+                        },
+                        {
+                            "model": {
+                                "en": "Cooling capacity",
+                                "ru": "Охлаждающая способность"
+                            },
+                            "gc-120-ascs": {
+                                "unit": "кВт",
+                                "en": "116,9",
+                                "ru": "116,9"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": {
+                        "en": "Compressor/motor",
+                        "ru": "Компрессор/ электродвигатель"
+                    },
+                    "headers": [
+                        {
+                            "name": {
+                                "en": "Brand",
+                                "ru": "Бренд"
+                            },
+                            "value": "brand"
+                        },
+                        {
+                            "name": {
+                                "en": "Hanbell(taiwan)",
+                                "ru": "Hanbell (Тайвань)"
+                            },
+                            "value": "hanbell(taiwan)"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "brand": {
+                                "en": "Type",
+                                "ru": "Тип"
+                            },
+                            "hanbell(taiwan)": {
+                                "en": "Semi closed double screw compressor",
+                                "ru": "Полузакрытый двойной винтовой компрессор"
+                            }
+                        },
+                        {
+                            "brand": {
+                                "en": "Quantity",
+                                "ru": "Количество"
+                            },
+                            "hanbell(taiwan)": {
+                                "en": "1",
+                                "ru": "1"
+                            }
+                        },
+                        {
+                            "brand": {
+                                "en": "Motor",
+                                "ru": "Электродвигатель"
+                            },
+                            "hanbell(taiwan)": {
+                                "en": "Smith（USA)",
+                                "ru": "Smith（США)"
+                            }
+                        },
+                        {
+                            "brand": {
+                                "en": "Input power",
+                                "ru": "Потребляемая мощность"
+                            },
+                            "hanbell(taiwan)": {
+                                "en": "33.7kw",
+                                "ru": "33.7kw"
+                            }
+                        },
+                        {
+                            "brand": {
+                                "en": "Running current",
+                                "ru": "Рабочий ток"
+                            },
+                            "hanbell(taiwan)": {
+                                "en": "56.7A",
+                                "ru": "56.7A"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": {
+                        "en": "Evaporator",
+                        "ru": "Испаритель"
+                    },
+                    "headers": [
+                        {
+                            "name": {
+                                "en": "Type",
+                                "ru": "Тип"
+                            },
+                            "value": "type"
+                        },
+                        {
+                            "name": {
+                                "en": "Hubpipetype",
+                                "ru": "Трубчатый"
+                            },
+                            "value": "hubpipetype"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "type": {
+                                "en": "Diameter of standard nipple",
+                                "ru": "Диаметр стандартного ниппеля"
+                            },
+                            "hubpipetype": {
+                                "unit": "DN",
+                                "en": "DN80",
+                                "ru": "DN80"
+                            }
+                        },
+                        {
+                            "type": {
+                                "en": "Freezing waterflow",
+                                "ru": "Расход охлаждающей воды"
+                            },
+                            "hubpipetype": {
+                                "unit": "m3/h",
+                                "en": "20",
+                                "ru": "20"
+                            }
+                        },
+                        {
+                            "type": {
+                                "en": "Pressure drop",
+                                "ru": "Падение давления"
+                            },
+                            "hubpipetype": {
+                                "unit": "kpa",
+                                "en": "30-100",
+                                "ru": "30-100"
+                            }
+                        },
+                        {
+                            "type": {
+                                "en": "Temperatu recontrol",
+                                "ru": "Контроль температуры"
+                            },
+                            "hubpipetype": {
+                                "en": "The water temperature sensor",
+                                "ru": "Датчик температуры воды"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": {
+                        "en": "Electrical control",
+                        "ru": "Вентилятор"
+                    },
+                    "headers": [
+                        {
+                            "name": {
+                                "en": "Airvolume",
+                                "ru": "Airvolume"
+                            },
+                            "value": "airvolume"
+                        },
+                        {
+                            "name": {
+                                "en": "m3/h",
+                                "ru": "m3/h"
+                            },
+                            "value": "m3/h"
+                        },
+                        {
+                            "name": {
+                                "en": "48000",
+                                "ru": "48000"
+                            },
+                            "value": "48000"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "airvolume": {
+                                "en": "Input power",
+                                "ru": "Input power"
+                            },
+                            "m3/h": {
+                                "en": "KW",
+                                "ru": "KW"
+                            },
+                            "48000": {
+                                "en": "3",
+                                "ru": "3"
+                            }
+                        },
+                        {
+                            "airvolume": {
+                                "en": "Quantity",
+                                "ru": "quantity"
+                            },
+                            "m3/h": {
+                                "en": "pis",
+                                "ru": "pis"
+                            },
+                            "48000": {
+                                "en": "2",
+                                "ru": "2"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "category": "5dac803d1a69c80ec88f2cba",
+            "subcategory": null
+        }
+    ]
+}

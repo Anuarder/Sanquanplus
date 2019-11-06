@@ -1,0 +1,419 @@
+{
+    "products": [
+        {
+            "name": {
+                "en": "PSCS-35 Cutting &Sewing Machine for Woven Bags",
+                "ru": "PSCS-35 Cutting &Sewing Machine for Woven Bags"
+            },
+            "images": [
+                "products/PSCS-35.png"
+            ],
+            "description": {
+                "en": "<ul> <li> Magnet Gripper for long life use (Innovative Gripper instead of traditional spring gripper) </li> <li> Two working position for circulation transferring by magnet gripper </li> <li> Servo controlling for cutting accuracy </li> <li> High-speed cutting and sewing </li> <li> Heat cutting with bag mouth open system equipped </li> <li> Edge position control(EPC) for winding and unwinding </li> <li> PLC operation control, digital display for operation monitor and operation setting </li> </ul>",
+                "ru": "<ul> <li> Magnet Gripper for long life use (Innovative Gripper instead of traditional spring gripper) </li> <li> Two working position for circulation transferring by magnet gripper </li> <li> Servo controlling for cutting accuracy </li> <li> High-speed cutting and sewing </li> <li> Heat cutting with bag mouth open system equipped </li> <li> Edge position control(EPC) for winding and unwinding </li> <li> PLC operation control, digital display for operation monitor and operation setting </li> </ul>"
+            },
+            "characteristics": [
+                {
+                    "name": {
+                        "en": "",
+                        "ru": ""
+                    },
+                    "headers": [
+                        {
+                            "name": {
+                                "en": "Parameter",
+                                "ru": "Parameter"
+                            },
+                            "value": "parameter"
+                        },
+                        {
+                            "name": {
+                                "en": "PSCS-35",
+                                "ru": "PSCS-35"
+                            },
+                            "value": "pscs-35"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "parameter": {
+                                "en": "Max. Facbric Width",
+                                "ru": "Max. Facbric Width"
+                            },
+                            "pscs-35": {
+                                "en": "800mm",
+                                "ru": "800mm"
+                            }
+                        },
+                        {
+                            "parameter": {
+                                "en": "Cutting Length",
+                                "ru": "Cutting Length"
+                            },
+                            "pscs-35": {
+                                "en": "350-1250mm",
+                                "ru": "350-1250mm"
+                            }
+                        },
+                        {
+                            "parameter": {
+                                "en": "Cutting accutacy",
+                                "ru": "Cutting accutacy"
+                            },
+                            "pscs-35": {
+                                "en": "+1.5mm",
+                                "ru": "+1.5mm"
+                            }
+                        },
+                        {
+                            "parameter": {
+                                "en": "Sewing Speed",
+                                "ru": "Sewing Speed"
+                            },
+                            "pscs-35": {
+                                "en": "35pcs/min",
+                                "ru": "35pcs/min"
+                            }
+                        },
+                        {
+                            "parameter": {
+                                "en": "Stitch range",
+                                "ru": "Stitch range"
+                            },
+                            "pscs-35": {
+                                "en": "3.6-8mm",
+                                "ru": "3.6-8mm"
+                            }
+                        },
+                        {
+                            "parameter": {
+                                "en": "Folding width",
+                                "ru": "Folding width"
+                            },
+                            "pscs-35": {
+                                "en": "15-25mm",
+                                "ru": "15-25mm"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "category": "5dac803d1a69c80ec88f2cae",
+            "subcategory": null
+        },
+        {
+            "name": {
+                "en": "SBT-700 Automatic liner inserting cutting & sewing machine",
+                "ru": "SBT-700 Automatic liner inserting cutting & sewing machine"
+            },
+            "images": [
+                "products/SBT-700.png"
+            ],
+            "description": {
+                "en": "<ul> <li> Auto pneumatic fabric roll loading  </li> <li> EPC </li> <li> Printing mark tracking，bag length contrlolled by servo system </li> <li> Hot cutting, auto mouth open </li> <li> Cold cutting,Servo system control (Optional) </li> <li> PLC centralized control,Touch screen display parameter setting and record </li> <li> Newlong Sewing machine, made in Japan </li> <li> Inverter control speed </li> <li> Auto bag counting, folding, transportation </li> </ul>",
+                "ru": "<ul> <li> Auto pneumatic fabric roll loading  </li> <li> EPC </li> <li> Printing mark tracking，bag length contrlolled by servo system </li> <li> Hot cutting, auto mouth open </li> <li> Cold cutting,Servo system control (Optional) </li> <li> PLC centralized control,Touch screen display parameter setting and record </li> <li> Newlong Sewing machine, made in Japan </li> <li> Inverter control speed </li> <li> Auto bag counting, folding, transportation </li> </ul>"
+            },
+            "characteristics": [
+                {
+                    "name": {
+                        "en": "",
+                        "ru": ""
+                    },
+                    "headers": [
+                        {
+                            "name": {
+                                "en": "Main technical parameters",
+                                "ru": "Основные технические характеристики"
+                            },
+                            "value": "parameter"
+                        },
+                        {
+                            "name": {
+                                "en": "Unit",
+                                "ru": "Ед. измерения"
+                            },
+                            "value": "unit"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "parameter": {
+                                "en": "Diameter of unwinding cloth",
+                                "ru": "Diameter of unwinding cloth"
+                            },
+                            "unit": {
+                                "en": "≤Φ1200mm",
+                                "ru": "≤Φ1200mm"
+                            }
+                        },
+                        {
+                            "parameter": {
+                                "en": "Max.width of cutting bag",
+                                "ru": "Max.width of cutting bag"
+                            },
+                            "unit": {
+                                "en": "700mm",
+                                "ru": "700mm"
+                            }
+                        },
+                        {
+                            "parameter": {
+                                "en": "Length of cutting bag",
+                                "ru": "Length of cutting bag"
+                            },
+                            "unit": {
+                                "en": "500~1300mm",
+                                "ru": "500~1300mm"
+                            }
+                        },
+                        {
+                            "parameter": {
+                                "en": "Production Capacity",
+                                "ru": "Production Capacity"
+                            },
+                            "unit": {
+                                "en": "25~45pcs/min",
+                                "ru": "25~45pcs/min"
+                            }
+                        },
+                        {
+                            "parameter": {
+                                "en": "Stitch Range",
+                                "ru": "Stitch Range"
+                            },
+                            "unit": {
+                                "en": "5~10mm",
+                                "ru": "5~10mm"
+                            }
+                        },
+                        {
+                            "parameter": {
+                                "en": "Fold Width of bag bottom",
+                                "ru": "Fold Width of bag bottom"
+                            },
+                            "unit": {
+                                "en": "20~30mm",
+                                "ru": "20~30mm"
+                            }
+                        },
+                        {
+                            "parameter": {
+                                "en": "Power",
+                                "ru": "Power"
+                            },
+                            "unit": {
+                                "en": "7kw",
+                                "ru": "7kw"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "category": "5dac803d1a69c80ec88f2cae",
+            "subcategory": null
+        },
+        {
+            "name": {
+                "en": "SBF-800 Auto Cutting And Sewing Machine for Woven Bag",
+                "ru": "Автоматическая резальная и швейная машина SBF-800 для тканых мешков"
+            },
+            "images": [
+                "products/SBF-800.png"
+            ],
+            "description": {
+                "en": "<ul> <li> Auto pneumatic fabric roll loading </li> <li> EPC </li> <li> Printing mark tracking，bag length contrlolled by servo system </li> <li> Hot cutting, auto mouth open </li> <li> Cold cutting,Servo system control (Optional) </li> <li> Liner Bag automatic bottom sealing,cutting and inserting </li> <li> PLC centralized control,Touch screen display parameter setting and record </li> <li> Newlong Sewing machine, made in Japan </li> <li> Inverter control speed </li> <li> Auto bag counting, folding, transportation </li> </ul>",
+                "ru": "<ul> <li> Автоматическая пневмозагрузка рулона с тканью <li> Контроль обработки кромок </li> <li> Отслеживание положения печатных символов, контроль длины мешка с помощью сервосистемы </li> <li> Горячая резка, автоматическое открывание входного отверстия мешка </li> <li> Холодная резка, контролируемая сервосистемой (опция) </li> <li> Централизованное управление с помощью ПЛК, монитор для контроля работы машины, установка, отображение и запись параметров </li> <li> Использование швейной машины Newlong (Япония) </li> <li> Инверторный контроль скорости </li> <li> Автоматический подсчет, складывание и транспортировка мешков </li> </ul>"
+            },
+            "characteristics": [
+                {
+                    "name": {
+                        "en": "",
+                        "ru": ""
+                    },
+                    "headers": [
+                        {
+                            "name": {
+                                "en": "Main technical parameters",
+                                "ru": "Основные технические характеристики"
+                            },
+                            "value": "parameter"
+                        },
+                        {
+                            "name": {
+                                "en": "Unit",
+                                "ru": "Ед. измерения"
+                            },
+                            "value": "unit"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "parameter": {
+                                "en": "Diameter of unwinding cloth",
+                                "ru": "Диаметр разматываемого рулона ткани"
+                            },
+                            "unit": {
+                                "en": "≤Φ1200mm",
+                                "ru": "≤Φ1200mm"
+                            }
+                        },
+                        {
+                            "parameter": {
+                                "en": "Max.width of cutting bag",
+                                "ru": "Макс. ширина мешка"
+                            },
+                            "unit": {
+                                "en": "700mm",
+                                "ru": "700mm"
+                            }
+                        },
+                        {
+                            "parameter": {
+                                "en": "Length of cutting bag",
+                                "ru": "Длина мешка"
+                            },
+                            "unit": {
+                                "en": "500~1300mm",
+                                "ru": "500~1300mm"
+                            }
+                        },
+                        {
+                            "parameter": {
+                                "en": "Production Capacity",
+                                "ru": "Производительность"
+                            },
+                            "unit": {
+                                "en": "15~25pcs/min",
+                                "ru": "15~25pcs/min"
+                            }
+                        },
+                        {
+                            "parameter": {
+                                "en": "Stitch Range",
+                                "ru": "Шаг стежка"
+                            },
+                            "unit": {
+                                "en": "5~14mm",
+                                "ru": "5~14mm"
+                            }
+                        },
+                        {
+                            "parameter": {
+                                "en": "Fold Width of bag bottom",
+                                "ru": "Ширина подворота дна мешка"
+                            },
+                            "unit": {
+                                "en": "20~30mm",
+                                "ru": "20~30mm"
+                            }
+                        },
+                        {
+                            "parameter": {
+                                "en": "Power",
+                                "ru": "Потребляемая мощность"
+                            },
+                            "unit": {
+                                "en": "18kw",
+                                "ru": "18kw"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "category": "5dac803d1a69c80ec88f2cae",
+            "subcategory": null
+        },
+        {
+            "name": {
+                "en": "SBQ-800 Auto Cutting Machine For Woven Bag",
+                "ru": "Автоматическая резальная и швейная машина SBF-800 для тканых мешков"
+            },
+            "images": [
+                "products/SBQ-800.png"
+            ],
+            "description": {
+                "en": "<ul> <li> Auto pneumatic fabric roll loading <li> EPC </li> <li> Printing mark tracking,bag length contrlolled by servo system </li> <li> Hot cutting, auto mouth open </li> <li> Cold cutting,Servo system control (Optional) </li> <li> PLC centralized control, operation monitor, parameter setting ,display, record </li> <li> Inverter control speed </li> <li> Auto bag counting, folding, transportation </li> </ul>",
+                "ru": "<ul> <li> Автоматическая пневмозагрузка рулона с тканью <li> Контроль обработки кромок </li> <li> Отслеживание положения печатных символов, контроль длины мешка с помощью сервосистемы </li> <li> Горячая резка, автоматическое открывание входного отверстия мешка </li> <li> Холодная резка, контролируемая сервосистемой (опция) </li> <li> Централизованное управление с помощью ПЛК, установка, отображение и запись параметров с помощью сенсорного дисплея </li> <li> Инверторный контроль скорости </li> <li> Автоматический подсчет, складывание и транспортировка мешков </li> </ul>"
+            },
+            "characteristics": [
+                {
+                    "name": {
+                        "en": "",
+                        "ru": ""
+                    },
+                    "headers": [
+                        {
+                            "name": {
+                                "en": "Main technical parameters",
+                                "ru": "Основные технические характеристики"
+                            },
+                            "value": "parameter"
+                        },
+                        {
+                            "name": {
+                                "en": "Unit",
+                                "ru": "Ед. измерения"
+                            },
+                            "value": "unit"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "parameter": {
+                                "en": "Diameter of unwinding cloth",
+                                "ru": "Диаметр разматываемого рулона ткани"
+                            },
+                            "unit": {
+                                "en": "≤Φ1200mm",
+                                "ru": "≤Φ1200mm"
+                            }
+                        },
+                        {
+                            "parameter": {
+                                "en": "Max.width of cutting bag",
+                                "ru": "Макс. ширина мешка"
+                            },
+                            "unit": {
+                                "en": "700mm",
+                                "ru": "700mm"
+                            }
+                        },
+                        {
+                            "parameter": {
+                                "en": "Length of cutting bag",
+                                "ru": "Длина мешка"
+                            },
+                            "unit": {
+                                "en": "500~1300mm",
+                                "ru": "500~1300mm"
+                            }
+                        },
+                        {
+                            "parameter": {
+                                "en": "Production Capacity",
+                                "ru": "Производительность"
+                            },
+                            "unit": {
+                                "en": "20~40pcs/min",
+                                "ru": "20~40pcs/min"
+                            }
+                        },
+                        {
+                            "parameter": {
+                                "en": "Power",
+                                "ru": "Потребляемая мощность"
+                            },
+                            "unit": {
+                                "en": "6kw",
+                                "ru": "6kw"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "category": "5dac803d1a69c80ec88f2cae",
+            "subcategory": null
+        }
+        
+    ]
+}

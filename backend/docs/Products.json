@@ -2,15 +2,15 @@
     "products": [
         {
             "name": {
-                "en": "PSCS-35 Cutting &Sewing Machine for Woven Bags",
-                "ru": "PSCS-35 Cutting &Sewing Machine for Woven Bags"
+                "en": "GC-120-ASCS",
+                "ru": "GC-120-ASCS"
             },
             "images": [
-                "products/PSCS-35 Cutting &Sewing Machine for Woven Bags.png"
+                "products/Chiller_GC-120.jpg"
             ],
             "description": {
-                "en": "<ul> <li> Magnet Gripper for long life use (Innovative Gripper instead of traditional spring gripper) </li> <li> Two working position for circulation transferring by magnet gripper </li> <li> Servo controlling for cutting accuracy </li> <li> High-speed cutting and sewing </li> <li> Heat cutting with bag mouth open system equipped </li> <li> Edge position control(EPC) for winding and unwinding </li> <li> PLC operation control, digital display for operation monitor and operation setting </li> </ul>",
-                "ru": "<ul> <li> Magnet Gripper for long life use (Innovative Gripper instead of traditional spring gripper) </li> <li> Two working position for circulation transferring by magnet gripper </li> <li> Servo controlling for cutting accuracy </li> <li> High-speed cutting and sewing </li> <li> Heat cutting with bag mouth open system equipped </li> <li> Edge position control(EPC) for winding and unwinding </li> <li> PLC operation control, digital display for operation monitor and operation setting </li> </ul>"
+                "en": "",
+                "ru": ""
             },
             "characteristics": [
                 {
@@ -20,79 +20,36 @@
                     },
                     "headers": [
                         {
-                            "name": "Parameter",
-                            "value": "parameter"
+                            "name": {
+                                "en": "Model",
+                                "ru": "Модель"
+                            },
+                            "value": "model"
                         },
                         {
-                            "name": "PSCS-35",
-                            "value": "pscs-35"
+                            "name": {
+                                "en": "GC-120-ASCS(Air cooled screw chiller)",
+                                "ru": "GC-120-ASCS (винтовой охладитель с воздушным охлаждением)"
+                            },
+                            "value": "gc-120-ascs"
                         }
                     ],
                     "data": [
                         {
-                            "parameter": {
-                                "en": "Max. Facbric Width",
-                                "ru": "Max. Facbric Width"
+                            "model": {
+                                "en": "Temperature of Chilling water in/out",
+                                "ru": "Температура входа/выхода охлаждающей воды"
                             },
-                            "pscs-35": {
-                                "en": "800mm",
-                                "ru": "800mm"
-                            }
-                        },
-                        {
-                            "parameter": {
-                                "en": "Cutting Length",
-                                "ru": "Cutting Length"
-                            },
-                            "pscs-35": {
-                                "en": "350-1250mm",
-                                "ru": "350-1250mm"
-                            }
-                        },
-                        {
-                            "parameter": {
-                                "en": "Cutting accutacy",
-                                "ru": "Cutting accutacy"
-                            },
-                            "pscs-35": {
-                                "en": "+1.5mm",
-                                "ru": "+1.5mm"
-                            }
-                        },
-                        {
-                            "parameter": {
-                                "en": "Sewing Speed",
-                                "ru": "Sewing Speed"
-                            },
-                            "pscs-35": {
-                                "en": "35pcs/min",
-                                "ru": "35pcs/min"
-                            }
-                        },
-                        {
-                            "parameter": {
-                                "en": "Stitch range",
-                                "ru": "Stitch range"
-                            },
-                            "pscs-35": {
-                                "en": "3.6-8mm",
-                                "ru": "3.6-8mm"
-                            }
-                        },
-                        {
-                            "parameter": {
-                                "en": "Folding width",
-                                "ru": "Folding width"
-                            },
-                            "pscs-35": {
-                                "en": "15-25mm",
-                                "ru": "15-25mm"
+                            "gc-120-ascs": {
+                                "unit": "℃",
+                                "en": "12℃/7℃",
+                                "ru": "12℃/7℃"
                             }
                         }
                     ]
                 }
             ],
-            "category": "5dac803d1a69c80ec88f2cae",
+            "category": "5dac803d1a69c80ec88f2caa",
             "subcategory": null
         }
     ]
