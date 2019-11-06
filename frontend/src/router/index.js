@@ -35,7 +35,7 @@ const routes = [
     component: () => import('../views/CatalogResult.vue')
   },
   {
-    path: '/search',
+    path: '/search/:text',
     name: 'search',
     component: () => import('../views/Search.vue')
   },

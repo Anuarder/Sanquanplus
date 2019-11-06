@@ -7,15 +7,23 @@ module.exports = {
   async getSearchProducts(req, res) {
     try {
       const products = await Product.find({});
-      const { search } = req.body;
+      const res_search = req.params.search;
+      const search = res_search.toLowerCase();
       if (!isEmpty(products)) {
-        // TODO: Поиск товаров здесь замутим
-        const result = ['sha vse budet'];
-        for(let item of products) {
-          console.log(item.name.en === search)
-        }
+        const text = products.filter(el => {
+          return el.name.en.toLowerCase().includes(search) || 
+            el.name.ru.toLowerCase().includes(search) ||
+            el.description.en.toLowerCase().includes(search) ||
+            el.description.ru.toLowerCase().includes(search);
+        });
+        console.log(search)
+        // Поиск по характеристикам
+        // const characteristics = products.filter.characteristics.data((el, i, array) => {
+        //   console.log(array[i][el])
+        // });
+
         res.send({
-          products: result
+          products: text
         })
       } else {
         res.status(404).send({

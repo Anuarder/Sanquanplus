@@ -6,5 +6,8 @@ export default {
   },
   getProductById(id) {
     return Api().get(`/get_product_by_id/${id}`);
+  },
+  getSearchProducts(text) {
+    return Api().get(`/get_search_products/${text}`);
   }
 }

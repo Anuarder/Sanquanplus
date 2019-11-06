@@ -4,23 +4,28 @@
     <div class="search page-content">
       <v-navigation></v-navigation>
       <div class="content">
-        <div class="search__container container">
-          <div class="search__title">
-            <h1>
-              Результаты поиска: PSCS-35
-            </h1>
-            <form>
-              <input type="text">
-              <button type="submit">Найти</button>
-            </form>
-            <h2>Найденно: 50</h2>
+        <div class="search__container container" >
+          <div class="container" v-if="isLoading">
+            {{$t('loading')}}
           </div>
-          <div class="search__results">
-            <v-product-card :product="product"></v-product-card>
-            <v-product-card :product="product"></v-product-card>
-            <v-product-card :product="product"></v-product-card>
-            <v-product-card :product="product"></v-product-card>
-            <v-product-card :product="product"></v-product-card>
+          <div v-if="!isLoading">
+            <div class="search__title">
+              <h1>
+                {{$t('search_result')}}: {{$route.params.text}}
+              </h1>
+              <form @submit.prevent="searchProducts">
+                <input type="text" v-model.trim="text" required>
+                <button type="submit">{{$t('search_find')}}</button>
+              </form>
+              <h2>{{$t('search_count')}}: {{products.length}}</h2>
+            </div>
+            <div class="search__results">
+              <v-product-card 
+                v-for="product in products"
+                :key="product._id"
+                :product="product">
+              </v-product-card>
+            </div>
           </div>
         </div>
       </div>
@@ -28,17 +33,47 @@
   </div>
 </template>
 <script>
+import ProductServices from '../services/Products.js';
+import SearchMixin from '../mixins/Search'
 export default {
+  mixins: [SearchMixin],
   data() {
     return {
-      product: {
-        images: ["products/PSCS-35 Cutting &Sewing Machine for Woven Bags.png"],
-        name: {
-          en: "PSCS-35 Cutting &Sewing Machine for Woven Bags"
-        }
-      }
+      products: [],
+      isLoading: false
     }
   },
+  async beforeRouteEnter(to, from, next) {
+    try {
+      const response = await ProductServices.getSearchProducts(to.params.text);
+      next(vm => {
+        vm.text = to.params.text;
+        vm.setData(response.data.products);
+      })
+    }catch(err) {
+      next()
+      console.log(err);
+    }
+  },
+  async beforeRouteUpdate(to, from, next) {
+    try {
+      this.isLoading = true;
+      this.products = [];
+      this.text = to.params.text;
+      const response = await ProductServices.getSearchProducts(to.params.text);
+      this.setData(response.data.products);
+      next();
+    }catch(err) {
+      next();
+      console.log(err);
+    }
+  },
+  methods: {
+    setData(data) {
+      this.products = data;
+      this.isLoading = false;
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>

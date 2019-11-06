@@ -46,9 +46,9 @@
         </router-link>
         <div class="mnavigation__actions">
           <div class="mnavigation__search">
-            <form>
+            <form @submit.prevent="searchProducts">
               <img src="../assets/search.svg" alt="search">
-              <input type="text" :placeholder="$t('search')">
+              <input type="text" :placeholder="$t('search')" v-model.trim="text">
             </form>
           </div>
           <div class="mnavigation__sidebar" @click="sidebar = true">
@@ -66,8 +66,9 @@
 <script>
 import VMobileMenu from "./MobileMenu"
 import LangMixin from "../mixins/Lang"
+import SearchMixin from "../mixins/Search"
 export default {
-  mixins: [LangMixin], 
+  mixins: [LangMixin, SearchMixin], 
   components: {
     VMobileMenu
   },

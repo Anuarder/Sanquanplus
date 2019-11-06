@@ -14,8 +14,8 @@
         <img src="../assets/close.svg" alt="close" @click="search = false">
       </div>
       <div class="search-block__form">
-        <form>
-          <input type="text" :placeholder="$t('search')">
+        <form @submit.prevent="searchProducts">
+          <input type="text" :placeholder="$t('search')" v-model.trim="text">
           <img src="../assets/search.svg" alt="search">
         </form>
       </div>
@@ -23,10 +23,12 @@
   </div>
 </template>
 <script>
+import SearchMixin from '../mixins/Search'
 export default {
+  mixins: [SearchMixin],
   data() {
     return {
-      search: false
+      search: false,
     }
   }
 }
