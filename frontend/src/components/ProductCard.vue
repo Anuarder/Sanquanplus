@@ -1,17 +1,19 @@
 <template>
-  <router-link class="product-card" tag="div" to='/product'>
+  <router-link class="product-card" tag="div" :to='`/product/${product._id}`'>
     <div 
       class="product-card__image" 
       :style="`background-image: url('${api_link}/static/${product.images[0]}')`">
     </div>
     <h1>
-      {{product.name.en}}
+      {{product.name[lang_val]}}
     </h1>
   </router-link>
 </template>
 <script>
 import { mapState } from 'vuex'
+import LangMixin from "../mixins/Lang"
 export default {
+  mixins: [LangMixin],
   props: {
     product: Object
   },
@@ -24,7 +26,7 @@ export default {
 .product-card {
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
   &__image {
-    height: 300px;
+    height: 200px;
     width: 100%;
     background-position: center;
     background-size: contain;

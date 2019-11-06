@@ -6,37 +6,37 @@
       <div class="content">
         <div class="contacts__container container">
           <div class="contacts__title">
-            Контакты
+            {{$t('contacts')}}
           </div>
           <div class="contacts__content">
             <div class="contacts__form">
-              <h1>Свяжитесь с нами</h1>
+              <h1>{{$t('contact_us')}}</h1>
               <form>
                 <div class="input-container">
-                  <input type="text" placeholder="Имя" required v-model="first_name">
-                  <input type="text" placeholder="Фамилия" required v-model="last_name">
+                  <input type="text" :placeholder="$t('first_name')" required v-model="first_name">
+                  <input type="text" :placeholder="$t('last_name')" required v-model="last_name">
                 </div>
                 <div class="input-container">
                   <input type="email" placeholder="E-mail" required v-model="email">
-                  <input type="text" placeholder="Телефон" required v-model="phone">
+                  <input type="text" :placeholder="$t('phone')" required v-model="phone">
                 </div>
                 <div class="input-container">
-                  <textarea placeholder="Ваше сообщение" required  v-model="message"/>
+                  <textarea :placeholder="$t('message')" required  v-model="message"/>
                 </div>
                 <button type="submit">
-                  Отправить сообщение
+                  {{$t('send_message')}}
                 </button>
               </form>
             </div>
             <div class="contacts__links">
               <h1>
-                Контактные данные
+                {{$t('contact_data')}}
               </h1>
               <a href="#">
-                +7(747) 736 58 84 <span class="colored">Россия</span>
+                +7(747) 736 58 84 <span class="colored">{{$t('russia')}}</span>
               </a>
               <a href="#">
-                +7(747) 736 58 84 <span class="colored">Казахстан</span>
+                +7(747) 736 58 84 <span class="colored">{{$t('kazakhstan')}}</span>
               </a>
               <a href="#">
                 E-mail: sanqanplas@gmail.com

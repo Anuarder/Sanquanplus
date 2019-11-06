@@ -9,17 +9,48 @@
         <div class="catalog__container">
           <div class="catalog__menu">
             <div class="catalog__navigation">
-              <router-link to="/" active-class="colored" exact>Главная</router-link>
-              <router-link to="/about" active-class="colored">О нас</router-link>
-              <router-link to="/info" active-class="colored">Информация</router-link>
-              <router-link to="/contacts" active-class="colored">Контакты</router-link>
+              <router-link 
+                to="/" 
+                active-class="colored" 
+                exact>
+                Главная
+              </router-link>
+              <router-link 
+                to="/about" 
+                active-class="colored">
+                О нас
+              </router-link>
+              <router-link 
+                to="/info" 
+                active-class="colored">
+                Информация
+              </router-link>
+              <router-link 
+                to="/contacts" 
+                active-class="colored">
+                Контакты
+              </router-link>
             </div>
             <div class="catalog__links">
               <h1>Каталог</h1>
-              <div v-for="(item, i) in categories" :key="item.id" class="catalog__link">
-                <span>{{i+1}}</span>
-                {{item.name.en}}
+              <div 
+                v-for="(item, i) in categories" 
+                :key="`desktop${item._id}`" 
+                class="catalog__link in-desktop"
+                :class="currentCategory === item._id ? 'colored' : ''"
+                @click="getProductsByCategory(item._id)">
+                  <span>{{i+1}}</span>
+                  {{item.name[lang_val]}}
               </div>
+              <router-link 
+                v-for="(item, i) in categories" 
+                :key="`mobile${item._id}`" 
+                :to="`/catalog_result/${item._id}`"
+                class="catalog__link in-mobile"
+                @click="getProductsByCategory(item._id)">
+                  <span>{{i+1}}</span>
+                  {{item.name[lang_val]}}
+              </router-link>
             </div>
           </div>
           <div class="catalog__products">
@@ -32,14 +63,18 @@
                 +7(747) 736 58 84
                 <span class="colored">Казахстан</span>
               </a>
+              <a class="pointer" @click="clickLanguage">
+                <span :class="lang === 'En' ? 'colored' : ''">Ру</span>
+                /
+                <span :class="lang === 'Рус' ? 'colored' : ''">En</span>
+              </a>
             </div>
             <div class="catalog__products-container">
-              <v-product-card :product="product"></v-product-card>
-              <v-product-card :product="product"></v-product-card>
-              <v-product-card :product="product"></v-product-card>
-              <v-product-card :product="product"></v-product-card>
-              <v-product-card :product="product"></v-product-card>
-              <v-product-card :product="product"></v-product-card>
+              <v-product-card 
+                v-for="product in products"
+                :key="product.id"
+                :product="product">
+              </v-product-card>
             </div>
           </div>
         </div>
@@ -48,26 +83,43 @@
   </div>
 </template>
 <script>
-import { mapGetters, mapActions } from "vuex";
+import CategoryServices from '../services/Categories.js'
+import ProductsServices from '../services/Products.js'
+import LangMixin from "../mixins/Lang"
 export default {
+  mixins: [LangMixin],
   data() {
     return {
-      product: {
-        images: ["products/PSCS-35 Cutting &Sewing Machine for Woven Bags.png"],
-        name: {
-          en: "PSCS-35 Cutting &Sewing Machine for Woven Bags"
-        }
-      }
+      categories: [],
+      products: [],
+      currentCategory: ''
     }
   },
   created() {
     this.getCategories();
   },
-  computed: {
-    ...mapGetters(["categories"])
-  },
   methods: {
-    ...mapActions(["getCategories"])
+    async getCategories() {
+      try {
+        const response = await CategoryServices.getCategories();
+        this.categories =  response.data.categories;
+        if (this.products.length === 0) {
+          this.getProductsByCategory(this.categories[0]._id)
+          this.currentCategory = this.categories[0]._id;
+        }
+      }catch(err){
+        console.log(err);
+      }
+    },
+    async getProductsByCategory(category_id) {
+      try {
+        this.currentCategory = category_id;
+        const response = await ProductsServices.getProductsByCategory(category_id);
+        this.products = response.data.products;
+      }catch(err) {
+        console.log(err);
+      }
+    },
   }
 };
 </script>
@@ -134,6 +186,7 @@ export default {
   }
 
   &__link {
+    cursor: pointer;
     margin-top: 1.5rem;
     display: flex;
     span {
@@ -170,6 +223,10 @@ export default {
       justify-content: center;
     }
   }
+}
+
+.in-mobile {
+  display: none
 }
 
 @media (max-width: 1530px) {
@@ -252,6 +309,12 @@ export default {
 @media (max-width: 1080px) {
   .is-mobile {
     display: block;
+  }
+  .in-mobile {
+    display: flex;
+  }
+  .in-desktop {
+    display: none;
   }
   .catalog {
     background: #f3f2f0;

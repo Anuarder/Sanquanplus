@@ -6,29 +6,27 @@
       <div class="content">
         <div class="home__container container">
           <div class="home__text">
-            <h1>
-              Ведущий системный  <br>
-              интегратор во всем мире!
+            <h1 v-html="$t('home_page.title')">
             </h1>
             <h2>
-              Оптовая продажа всех видов оборудования
+              {{$t('home_page.subtitle')}}
             </h2>
           </div>
           <div class="home__buttons">
             <div class="home__button">
-              Инфраструктура и инженирия
+              {{$t('home_page.button1')}}
               <span>
                 01
               </span>
             </div>
             <div class="home__button">
-              Комплексная безопасность
+              {{$t('home_page.button2')}}
               <span>
                 02
               </span>
             </div>
             <div class="home__button">
-              Аутсорсинг и сервис
+              {{$t('home_page.button3')}}
               <span>
                 03
               </span>

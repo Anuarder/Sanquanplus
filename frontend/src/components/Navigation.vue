@@ -8,24 +8,29 @@
         <div class="navigation__actions">
           <div class="navigation__links">
             <router-link to="/" active-class="colored" exact>
-              Главная
+              {{$t('home')}}
             </router-link>
             <router-link to="/about" active-class="colored">
-              О нас
+              {{$t('about')}}
             </router-link>
             <router-link to="/info" active-class="colored">
-              Информация
+              {{$t('information')}}
             </router-link>
             <router-link to="/contacts" active-class="colored">
-              Контакты
+              {{$t('contacts')}}
             </router-link>
           </div>
           <div class="navigation__phones">
             <a href="#">
-              +7(747) 736 58 84 <span class="colored">Россия</span>
+              +7(747) 736 58 84 <span class="colored">{{$t('russia')}}</span>
             </a>
             <a href="#">
-              +7(747) 736 58 84 <span class="colored">Казахстан</span>
+              +7(747) 736 58 84 <span class="colored">{{$t('kazakhstan')}}</span>
+            </a>
+            <a class="navigation__languages" @click="clickLanguage">
+              <span :class="lang === 'En' ? 'colored' : ''">Ру</span>
+              /
+              <span :class="lang === 'Рус' ? 'colored' : ''">En</span>
             </a>
           </div>
           <div class="navigation__sidebar" @click="sidebar = true">
@@ -43,7 +48,7 @@
           <div class="mnavigation__search">
             <form>
               <img src="../assets/search.svg" alt="search">
-              <input type="text" placeholder="Введите что ищите...">
+              <input type="text" :placeholder="$t('search')">
             </form>
           </div>
           <div class="mnavigation__sidebar" @click="sidebar = true">
@@ -60,7 +65,9 @@
 </template>
 <script>
 import VMobileMenu from "./MobileMenu"
+import LangMixin from "../mixins/Lang"
 export default {
+  mixins: [LangMixin], 
   components: {
     VMobileMenu
   },
@@ -91,6 +98,9 @@ export default {
   }
   &__sidebar {
     display: none;
+  }
+  &__languages {
+    cursor: pointer;
   }
   &__logo {
     margin-right: 2rem;
@@ -155,6 +165,15 @@ export default {
   }
 }
 
+@media (max-width: 1260px) {
+  .navigation {
+    &__links {
+      a {
+        margin-right: 2rem;
+      }
+    }
+  }
+}
 @media (max-width: 1220px) {
   .navigation {
      &__container {
@@ -173,10 +192,13 @@ export default {
   }
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1110px) {
   .navigation {
      &__container {
       height: 60px;
+    }
+    &__languages {
+      display: none;
     }
     &__logo {
       max-width: 70px;

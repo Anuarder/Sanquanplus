@@ -9,35 +9,42 @@
       <div class="mobile-menu__links">
         <router-link to="/" active-class="colored" exact @click.native="close">
           <span>01.</span>
-          Главная
+          {{$t('home')}}
         </router-link>
         <router-link to="/about" active-class="colored" @click.native="close">
           <span>02.</span>
-          О нас
+           {{$t('about')}}
         </router-link>
         <router-link to="/info" active-class="colored" @click.native="close">
           <span>03.</span>
-          Информация
+           {{$t('information')}}
         </router-link>
         <router-link to="/contacts" active-class="colored" @click.native="close">
           <span>04.</span>
-          Контакты
+           {{$t('contacts')}}
         </router-link>
       </div>
       <div class="mobile-menu__phones">
         <hr>
         <a href="#">
-          +7(747) 736 58 84 <span class="colored">Россия</span>
+          +7(747) 736 58 84 <span class="colored">{{$t('russia')}}</span>
         </a>
         <a href="#">
-          +7(747) 736 58 84 <span class="colored">Казахстан</span>
+          +7(747) 736 58 84 <span class="colored"> {{$t('kazakhstan')}}</span>
+        </a>
+        <a @click="clickLanguage" class="pointer">
+          <span :class="lang === 'En' ? 'colored' : ''">Ру</span>
+            /
+            <span :class="lang === 'Рус' ? 'colored' : ''">En</span>
         </a>
       </div>
     </div>
   </div>
 </template>
 <script>
+import LangMixin from "../mixins/Lang"
 export default {
+  mixins: [LangMixin],
   methods: {
     close(){
       this.$emit('close')

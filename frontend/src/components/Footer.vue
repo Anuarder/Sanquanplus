@@ -2,12 +2,12 @@
   <div class="footer">
     <div class="footer__container container">
       <div class="footer__contacts">
-        <h1>Контакты</h1>
+        <h1>{{$t('contacts')}}</h1>
         <a href="#">
-          +7(747) 736 58 84 <span class="colored">Россия</span>
+          +7(747) 736 58 84 <span class="colored">{{$t('russia')}}</span>
         </a>
         <a href="#">
-          +7(747) 736 58 84 <span class="colored">Казахстан</span>
+          +7(747) 736 58 84 <span class="colored">{{$t('kazakhstan')}}</span>
         </a>
         <a href="#">
           E-mail: sanqanplas@gmail.com
@@ -16,10 +16,10 @@
       <div class="footer__actions">
         <a href="#">+7(747) 736 58 84</a>
         <span class="colored">
-          Телефон горячей линии
+          {{$t('hotline_phone')}}
         </span>
         <router-link to="/contacts" tag="button">
-          Оставить заявку
+          {{$t('send_request')}}
         </router-link>
       </div>
     </div>

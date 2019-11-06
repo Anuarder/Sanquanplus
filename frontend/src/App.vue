@@ -75,7 +75,9 @@ label {
   @include flex_column;
   overflow: auto;
 }
-
+.pointer {
+  cursor: pointer;
+}
 .content {
   flex: 1;
 }

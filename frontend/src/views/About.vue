@@ -5,37 +5,25 @@
       <v-navigation></v-navigation>
       <div class="content">
         <div class="about__container container">
-          <div class="about__title">Почему мы?</div>
+          <div class="about__title">{{$t('about_page.title')}}</div>
           <div class="about__content">
             <div class="about__numbers">
               <div class="about__number about__number--first">
                 <div>
                   <h1>20+</h1>
-                  <h2>
-                    Лет на рынке.
-                    <br />Работаем с 1999 года!
-                    <br />Опыт часть нашей компании
-                  </h2>
+                  <h2 v-html="$t('about_page.number1')"></h2>
                 </div>
               </div>
               <div class="about__number about__number--second">
                 <div>
                   <h1>85+</h1>
-                  <h2>
-                    Городах есть наши филиалы,
-                    <br />мы дорожим нашими
-                    <br />партнерами
-                  </h2>
+                  <h2 v-html="$t('about_page.number2')"></h2>
                 </div>
               </div>
               <div class="about__number about__number--thrid">
                 <div>
                   <h1>98%</h1>
-                  <h2>
-                    Довольных клиентов.
-                    <br />Товар высшего качества
-                    <br />работает годами!
-                  </h2>
+                  <h2 v-html="$t('about_page.number3')"></h2>
                 </div>
               </div>
             </div>
@@ -44,40 +32,28 @@
                 <div class="about__list-item">
                   <div class="about__list-count">01.</div>
                   <div class="about__list-text">
-                    <h1>Экономия денег</h1>
-                    <h2>
-                      Разработка , производство поставка
-                      <br />лицензионного товара по самым
-                      <br />привлекательным ценам
-                    </h2>
+                    <h1>{{$t('about_page.list1.title')}}</h1>
+                    <h2 v-html="$t('about_page.list1.text')"></h2>
                   </div>
                 </div>
                 <hr />
                 <div class="about__list-item">
                   <div class="about__list-count">02.</div>
                   <div class="about__list-text">
-                    <h1>Надежный поставщик</h1>
-                    <h2>
-                      Разработка , производство поставка
-                      <br />лицензионного товара по самым
-                      <br />привлекательным ценам
-                    </h2>
+                    <h1>{{$t('about_page.list2.title')}}</h1>
+                    <h2 v-html="$t('about_page.list2.text')"></h2>
                   </div>
                 </div>
                 <hr />
                 <div class="about__list-item">
                   <div class="about__list-count">03.</div>
                   <div class="about__list-text">
-                    <h1>Долгий срок службы</h1>
-                    <h2>
-                      Срок службы не менее 20 лет.
-                      <br />Качество обусловлено строгим контролем
-                      <br />качества производства каждого изделия.
-                    </h2>
+                    <h1>{{$t('about_page.list3.title')}}</h1>
+                    <h2 v-html="$t('about_page.list3.text')"></h2>
                   </div>
                 </div>
               </div>
-              <router-link class="about__list-button" to="/catalog">Открыть каталог</router-link>
+              <router-link class="about__list-button" to="/catalog">{{$t('open_catalog')}}</router-link>
             </div>
           </div>
         </div>

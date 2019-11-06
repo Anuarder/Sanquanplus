@@ -8,18 +8,17 @@
           @click="close">
       </div>
       <h1>
-        Форма заявки
+        {{$t('dialog.title')}}
       </h1>
       <h2>
-        Чтобы оставить заявку на выбранный
-        товар или услугу заполните форму.
+        {{$t('dialog.text')}}
       </h2>
       <img :src="`${api_link}/static/${product.images[0]}`" :alt="product.name">
       <form>
-        <input type="text" placeholder="Ваше имя">
-        <input type="num" placeholder="Ваш номер телефона">
-        <input type="email" placeholder="Ваш email">
-        <button type="submit">Оформить заказ</button>
+        <input type="text" :placeholder="$t('first_name')">
+        <input type="num" :placeholder="$t('phone')">
+        <input type="email" placeholder="Email">
+        <button type="submit">{{$t('send_request')}}</button>
       </form>
     </div>
   </div>

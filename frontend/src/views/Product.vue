@@ -4,41 +4,48 @@
     <div class="product page-content">
       <v-navigation></v-navigation>
       <div class="content">
-        <div class="product__container container">
+        <div class="product__container container" v-if="product">
           <h1 class="product__title">
-            {{product.name.en}}
+            {{product.name[lang_val]}}
           </h1>
           <div class="product__info">
             <div class="product__images">
-              <!-- //TODO: Поставить обычный слайдер -->
-              <!-- потому что может быть больше 3 фоток -->
-              <img :src="`${api_link}/static/${product.images[0]}`">
+                <div 
+                  v-for="(item, i) in product.images"
+                  :key="i">
+                  <img :src="`${api_link}/static/${item}`">
+                </div>
             </div>
             <p 
-              v-html="product.description.en">
+              v-html="product.description[lang_val]">
             </p>
           </div>
           <div class="product__characteristics">
-            <table 
-              v-for="item in product.characteristics" 
-              :key="item._id">
-              <thead>
-                <tr>
-                  <th v-for="head in item.headers" :key="head.value">
-                    {{head.name}}
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr v-for="(data, i) in item.data" :key="i">
-                  <td v-for="head in item.headers" :key="head.value">
-                    {{data[head.value].en}}
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div 
+                v-for="item in product.characteristics" 
+                :key="item._id">
+              <h1 v-if="item.name">{{item.name[lang_val]}}</h1>
+              <table>
+                <thead>
+                  <tr>
+                    <th v-for="head in item.headers" :key="head.value">
+                      {{head.name[lang_val]}}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="(data, i) in item.data" :key="i">
+                    <td v-for="head in item.headers" :key="head.value">
+                      {{data[head.value][lang_val]}}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-          <button class="product__button" @click="dialog = true">Оформить заказ</button>
+          <button class="product__button" @click="dialog = true">
+            {{$t('send_request')}}
+          </button>
         </div>
         <v-dialog
           v-if="dialog"
@@ -53,116 +60,35 @@
 <script>
 import { mapState } from 'vuex'
 import VDialog from '../components/Dialog'
+import ProductsServices from '../services/Products.js'
+
+import LangMixin from "../mixins/Lang"
 export default {
+  mixins: [LangMixin],
   components: {
     VDialog
   },
   data() {
     return {
       dialog: false,
-      product: {
-        name: {
-          en: "PSCS-35 Cutting &Sewing Machine for Woven Bags",
-          ru: "PSCS-35 Cutting &Sewing Machine for Woven Bags"
-        },
-        images: [
-          "products/PSCS-35 Cutting &Sewing Machine for Woven Bags.png",
-          "products/PSCS-35 Cutting &Sewing Machine for Woven Bags.png",
-          "products/PSCS-35 Cutting &Sewing Machine for Woven Bags.png",
-        ],
-        description: {
-          en:
-            "<ul> <li> Magnet Gripper for long life use (Innovative Gripper instead of traditional spring gripper) </li> <li> Two working position for circulation transferring by magnet gripper </li> <li> Servo controlling for cutting accuracy </li> <li> High-speed cutting and sewing </li> <li> Heat cutting with bag mouth open system equipped </li> <li> Edge position control(EPC) for winding and unwinding </li> <li> PLC operation control, digital display for operation monitor and operation setting </li> </ul>",
-          ru:
-            "<ul> <li> Magnet Gripper for long life use (Innovative Gripper instead of traditional spring gripper) </li> <li> Two working position for circulation transferring by magnet gripper </li> <li> Servo controlling for cutting accuracy </li> <li> High-speed cutting and sewing </li> <li> Heat cutting with bag mouth open system equipped </li> <li> Edge position control(EPC) for winding and unwinding </li> <li> PLC operation control, digital display for operation monitor and operation setting </li> </ul>"
-        },
-        characteristics: [
-          {
-            name: {
-              en: "",
-              ru: ""
-            },
-            headers: [
-              {
-                name: "Parameter",
-                value: "parameter"
-              },
-              {
-                name: "PSCS-35",
-                value: "pscs-35"
-              }
-            ],
-            data: [
-              {
-                parameter: {
-                  en: "Max. Facbric Width",
-                  ru: "Max. Facbric Width"
-                },
-                "pscs-35": {
-                  en: "800mm",
-                  ru: "800mm"
-                }
-              },
-              {
-                parameter: {
-                  en: "Cutting Length",
-                  ru: "Cutting Length"
-                },
-                "pscs-35": {
-                  en: "350-1250mm",
-                  ru: "350-1250mm"
-                }
-              },
-              {
-                parameter: {
-                  en: "Cutting accutacy",
-                  ru: "Cutting accutacy"
-                },
-                "pscs-35": {
-                  en: "+1.5mm",
-                  ru: "+1.5mm"
-                }
-              },
-              {
-                parameter: {
-                  en: "Sewing Speed",
-                  ru: "Sewing Speed"
-                },
-                "pscs-35": {
-                  en: "35pcs/min",
-                  ru: "35pcs/min"
-                }
-              },
-              {
-                parameter: {
-                  en: "Stitch range",
-                  ru: "Stitch range"
-                },
-                "pscs-35": {
-                  en: "3.6-8mm",
-                  ru: "3.6-8mm"
-                }
-              },
-              {
-                parameter: {
-                  en: "Folding width",
-                  ru: "Folding width"
-                },
-                "pscs-35": {
-                  en: "15-25mm",
-                  ru: "15-25mm"
-                }
-              }
-            ]
-          }
-        ],
-        category: "5dac803d1a69c80ec88f2cae",
-        subcategory: null
-      }
-    };
+      product: null
+    }
+  },
+  created() {
+    this.getProduct(this.$route.params.id);
   },
   computed: {
-    ...mapState(['api_link'])
+    ...mapState(['api_link']),
+  },
+  methods: {
+    async getProduct(product_id) {
+      try {
+        const response = await ProductsServices.getProductById(product_id);
+        this.product = response.data.product;
+      }catch(err) {
+        console.log(err);
+      }
+    }
   }
 };
 </script>
@@ -196,7 +122,25 @@ export default {
 
   &__characteristics {
     margin-top: 5rem;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      height: 3px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #c3c3c3;
+      height: 3px;
+      border-radius: 2px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+    h1 {
+      margin-top: 2rem;
+      margin-left: 1rem;
+    }
     table {
+      margin-top: 1rem;
+      min-width: 700px;
       width: 100%;
       border-collapse: collapse;
       td, th {

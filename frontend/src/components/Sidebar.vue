@@ -3,7 +3,7 @@
     <router-link class="sidebar__catalog" to="/catalog">
       <h1>
         <img src="../assets/menu.svg" alt="menu">
-        Каталог
+        {{$t('catalog')}}
       </h1>
     </router-link>
     <div v-if="!search" class="sidebar__search" @click="search = true">
@@ -15,7 +15,7 @@
       </div>
       <div class="search-block__form">
         <form>
-          <input type="text" placeholder="Что вы ищите?">
+          <input type="text" :placeholder="$t('search')">
           <img src="../assets/search.svg" alt="search">
         </form>
       </div>
