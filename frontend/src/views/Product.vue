@@ -13,7 +13,7 @@
                 <div 
                   v-for="(item, i) in product.images"
                   :key="i">
-                  <img :src="`${api_link}/static/${item}`">
+                  <img :src="`${api_link}//static/${item}`">
                 </div>
             </div>
             <p 
@@ -71,7 +71,8 @@ export default {
   data() {
     return {
       dialog: false,
-      product: null
+      product: null,
+      error: ''
     }
   },
   created() {
@@ -86,7 +87,7 @@ export default {
         const response = await ProductsServices.getProductById(product_id);
         this.product = response.data.product;
       }catch(err) {
-        console.log(err);
+        this.error = err;
       }
     }
   }

@@ -52,7 +52,6 @@ export default {
       })
     }catch(err) {
       next()
-      console.log(err);
     }
   },
   async beforeRouteUpdate(to, from, next) {
@@ -65,7 +64,6 @@ export default {
       next();
     }catch(err) {
       next();
-      console.log(err);
     }
   },
   methods: {

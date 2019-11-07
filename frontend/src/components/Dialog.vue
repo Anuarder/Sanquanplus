@@ -13,7 +13,7 @@
       <h2>
         {{$t('dialog.text')}}
       </h2>
-      <img :src="`${api_link}/static/${product.images[0]}`" :alt="product.name">
+      <img :src="`${api_link}//static/${product.images[0]}`" :alt="product.name">
       <form>
         <input type="text" :placeholder="$t('first_name')">
         <input type="num" :placeholder="$t('phone')">

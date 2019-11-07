@@ -2,7 +2,7 @@
   <router-link class="product-card" tag="div" :to='`/product/${product._id}`'>
     <div 
       class="product-card__image" 
-      :style="`background-image: url('${api_link}/static/${product.images[0]}')`">
+      :style="`background-image: url('${api_link}//static/${product.images[0]}')`">
     </div>
     <h1>
       {{product.name[lang_val]}}

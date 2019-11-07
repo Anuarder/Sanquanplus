@@ -22,7 +22,8 @@ import ProductsServices from '../services/Products';
 export default {
   data() {
     return {
-      products: []
+      products: [],
+      error: ''
     }
   },
   computed: {
@@ -37,7 +38,7 @@ export default {
          const response = await ProductsServices.getProductsByCategory(id);
          this.products = response.data.products;
        }catch(err) {
-         console.log(err);
+         this.error = err;
        }
     }
   }

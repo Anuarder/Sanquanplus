@@ -92,7 +92,8 @@ export default {
     return {
       categories: [],
       products: [],
-      currentCategory: ''
+      currentCategory: '',
+      error: ''
     }
   },
   created() {
@@ -108,7 +109,7 @@ export default {
           this.currentCategory = this.categories[0]._id;
         }
       }catch(err){
-        console.log(err);
+        this.error = err;
       }
     },
     async getProductsByCategory(category_id) {
@@ -117,7 +118,7 @@ export default {
         const response = await ProductsServices.getProductsByCategory(category_id);
         this.products = response.data.products;
       }catch(err) {
-        console.log(err);
+        this.error = err;
       }
     },
   }
